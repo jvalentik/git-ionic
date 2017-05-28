@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { GithubUsersProvider } from '../../providers/github-users/github-users';
+import { GithubApiProvider } from '../../providers/github-api/github-api';
 import { User } from '../../models/user';
 
 @IonicPage()
@@ -14,7 +14,7 @@ export class UserDetailsPage {
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              private githubService: GithubUsersProvider) {
+              private githubService: GithubApiProvider) {
     this.login = this.navParams.get('login');
     this.githubService
         .getUser(this.login)

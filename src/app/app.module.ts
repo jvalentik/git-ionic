@@ -7,7 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { UsersPage } from '../pages/users/users';
 import { ReposPage } from '../pages/repos/repos';
 import { OrganizationsPage } from '../pages/organizations/organizations';
-import { GithubUsersProvider } from '../providers/github-users/github-users';
+import { GithubApiProvider } from '../providers/github-api/github-api';
 import { HttpModule } from '@angular/http';
 import { UserDetailsPage } from '../pages/user-details/user-details';
 
@@ -36,7 +36,7 @@ import { UserDetailsPage } from '../pages/user-details/user-details';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    GithubUsersProvider
+    GithubApiProvider
   ]
 })
 export class AppModule {}

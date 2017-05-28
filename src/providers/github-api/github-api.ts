@@ -5,7 +5,7 @@ import { User } from '../../models/user';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
-export class GithubUsersProvider {
+export class GithubApiProvider {
   githubApiUrl = 'https://api.github.com';
 
   constructor(public http: Http) {
